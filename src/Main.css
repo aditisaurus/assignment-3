@@ -47,3 +47,32 @@
     width: 1em;
     height: 1em;
 }
+
+.card-actions {
+    background:#fafafa;
+    border-top: 1px solid #e8e8e8;
+    margin: 0;
+    zoom: 1;
+}
+
+.heart-icon {
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(255, 0, 0);
+    box-sizing: border-box;
+    border-right: 1px solid #e8e8e8;
+
+}
+
+.edit-icon {
+    cursor: pointer;
+    font-size: 18px;
+    color: rgba(0,0,0,.45);
+    border-right: 1px solid #e8e8e8;
+}
+
+.delete-icon {
+    cursor: pointer;
+    font-size: 18px;
+    color: rgba(0,0,0,.45);
+}
