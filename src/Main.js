@@ -1,38 +1,14 @@
 import React from 'react'
-import './Main.css';
-import {Card, Row, Col} from 'react-bootstrap';
-import {PhoneOutlined, MailOutlined, GlobalOutlined, HeartOutlined, EditOutlined, DeleteFilled } from '@ant-design/icons';
+import ProfileCard from './ProfileCard';
 
 function Main({data, setData}) {
   return (
     <div className="main">
-      <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <h3 className="name">Name</h3>
-
-        <div className="mail">
-        <MailOutlined className="icon"/>
-        <p>Mail</p>
-        </div>
-        <div className="phone">
-        <PhoneOutlined className="icon" /> 
-        <p>Phone</p>
-        </div>
-        <div className="web">
-        <GlobalOutlined className="icon" /> 
-        <p>Web</p>
-        </div>
-
-        <Row className="card-actions">
-        <Col className="heart-icon"><HeartOutlined /></Col>
-        <Col className="edit-icon"><EditOutlined /></Col>
-        <Col className="delete-icon"><DeleteFilled /></Col>
-      </Row>
-       
-      </Card.Body>
-    </Card>
+{data?.map((value) => (
+    <ProfileCard username={value.username} name={value.name} phone={value.phone} email={value.email} website={value.website}/>
+     ))}
     </div>
+   
   )
 }
 

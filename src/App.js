@@ -12,15 +12,17 @@ function App() {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
-      .then((json) => {
-        setData(json.data)
+      .then((data) => {
+        setData(data)
+        console.log(data);
       })
   }, [])
 
 
   return (
     <div className="App">
-      <Main data={data} setData={setData}/>
+      {data?.length>0 &&
+      <Main data={data} setData={setData}/>}
     </div>
   );
 }
