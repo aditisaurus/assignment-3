@@ -5,7 +5,7 @@ function Main({data, setData}) {
   return (
     <div className="main">
 {data?.map((value) => (
-    <ProfileCard username={value.username} name={value.name} phone={value.phone} email={value.email} website={value.website}/>
+    <ProfileCard username={value.username} name={value.name} phone={value.phone} email={value.email} website={value.website} setData={setData} id={value.id} data={data}/>
      ))}
     </div>
    
