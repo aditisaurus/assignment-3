@@ -47,7 +47,7 @@ const newPhone = (event) => {
 
   return (
     <div className="profileCard">
-        
+  
       <Card className="card" style={{ width: '20.5rem' }}>
       <Card.Img className="img" variant="top" src={`https://avatars.dicebear.com/v2/avataaars/${username}.svg?options[mood][]=happy`}/>
       <Card.Body>
@@ -74,6 +74,7 @@ const newPhone = (event) => {
        
       </Card.Body>
     </Card>
+    
     <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title className="modal-title">Basic Modal</Modal.Title>
@@ -81,48 +82,52 @@ const newPhone = (event) => {
         <Modal.Body >
             <Form className="modal-body">
               <Row>
+              <Col>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Col><Form.Label className="modal-enquiries">Name:</Form.Label></Col>
-              <Col><Form.Control className="modal-input"
+              <Form.Label className="modal-enquiries">Name:</Form.Label>
+              <Form.Control className="modal-input"
                 type="email"
                 value={updatedName}  onChange={(e)=>newName(e)}      
                  autoFocus
               />
-              </Col>
             </Form.Group>
+            </Col>
             </Row>
             <Row>
+              <Col>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Col><Form.Label className="modal-enquiries">Email:</Form.Label></Col>
-              <Col><Form.Control className="modal-input"
+              <Form.Label className="modal-enquiries">Email:</Form.Label>
+              <Form.Control className="modal-input"
                 type="email"
                 value={updatedEmail}  onChange={(e)=>newEmail(e)}     
                   autoFocus
               />
-              </Col>
             </Form.Group>
+             </Col>
             </Row>
             <Row>
+            <Col>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-             <Col><Form.Label className="modal-enquiries">Phone:</Form.Label></Col> 
-             <Col> <Form.Control className="modal-input"
+             <Form.Label className="modal-enquiries">Phone:</Form.Label>
+             <Form.Control className="modal-input"
                 type="email"
                 value={updatedPhone} onChange={(e)=>newPhone(e)} 
                 autoFocus
               />
-              </Col> 
             </Form.Group>
+            </Col> 
             </Row>
             <Row>
+            <Col>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Col><Form.Label className="modal-enquiries">Website:</Form.Label></Col>
-              <Col><Form.Control className="modal-input"
+              <Form.Label className="modal-enquiries">Website:</Form.Label>
+              <Form.Control className="modal-input"
                 type="email"
                 value={updatedWebsite} onChange={(e)=>newWebsite(e)}         
                   autoFocus
               />
-              </Col>
             </Form.Group>
+            </Col>
             </Row>
           
           </Form>
